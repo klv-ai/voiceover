@@ -1,0 +1,23 @@
+Voiceover
+Copyright 2026 KLV Agentic, Inc.
+
+This product includes software developed at KLV Agentic, Inc., licensed under the Apache
+License, Version 2.0 (see LICENSE).
+
+Bundled third-party files
+-------------------------
+narrate/models/mp.rnnn, narrate/models/sh.rnnn
+  RNNoise model weights from https://github.com/GregorR/rnnoise-models, trained
+  for Xiph's RNNoise (BSD-3-Clause). See narrate/models/README.md.
+
+Software and models used but not included
+-----------------------------------------
+Voiceover runs, or downloads on first use, the following. Each has its own
+licence and terms of use, which apply to your use of it:
+
+  VoxCPM / VoxCPM2 (OpenBMB)      https://github.com/OpenBMB/VoxCPM
+  Whisper (OpenAI)                https://github.com/openai/whisper
+  FFmpeg                          https://ffmpeg.org/legal.html
+  Ollama, and the models you run with it (the default, Gemma, is under the
+  Gemma Terms of Use)             https://ollama.com
+  PyTorch                         https://pytorch.org

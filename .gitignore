@@ -1,0 +1,41 @@
+# Environments — rebuilt from requirements.txt / package.json, and a moved
+# venv's console scripts carry dead shebangs anyway.
+narrate/.venv/
+narrate/.venv-tts/
+studio/node_modules/
+studio/.svelte-kit/
+studio/build/
+
+# Everything a project IS: source video, takes, renders, the voice corpus.
+# Gigabytes of it, none of it reproducible from source, none of it code.
+studio/data/
+
+# Credentials. Belt and braces — data/ already covers it, but this file is the
+# thing a reader checks.
+studio/data/keys/
+*.key
+
+# Scratch
+__pycache__/
+*.pyc
+.DS_Store
+
+# An install's own words — the studio keeps them in Settings; these are for
+# running narrate on its own. The repo ships *.example.txt.
+narrate/lexicon.txt
+narrate/pronounce.txt
+
+# Scripts and cases from real videos, for local evaluation only.
+narrate/lab/script_cases/
+
+# Never commit media, weights or environment files, wherever they end up.
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.m4v
+*.pt
+*.safetensors
+*.gguf
+.env
+.env.*

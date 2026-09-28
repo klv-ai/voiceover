@@ -1,0 +1,17 @@
+# Names that must come back from the transcriber spelled EXACTLY, for the take
+# checker (lab/verify_take.py) run on its own. The studio does not read this
+# file: its list is Settings → Must be said exactly.
+#
+# The take checker forgives near-miss spellings on purpose — the transcriber
+# has never seen your product names and writes something close for a
+# perfectly spoken one. But the same forgiveness scores a MISPRONOUNCED name as
+# a perfect read: unprimed, the transcriber writes what it hears, so a name
+# said wrong comes back spelled wrong.
+#
+# A word listed here that comes back respelled does not fail the take; it
+# earns another roll, and a take that spells it right wins over one that
+# doesn't. Only list a name after checking the transcriber can spell it when
+# it is said right — a homophone can never pass, and would re-roll every line
+# it appears in.
+#
+# Copy to pronounce.txt, one name per line.

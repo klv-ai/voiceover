@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.analysis.json
+*.cut.mp4
+*.final.mp4
+*.pickups/

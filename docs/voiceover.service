@@ -1,0 +1,26 @@
+# systemd unit for the built studio (cd studio && npm ci && npm run build).
+# Copy to /etc/systemd/system/voiceover.service, set User and the paths, then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now voiceover
+[Unit]
+Description=Voiceover studio
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=voiceover
+# AMD GPUs: the user must reach /dev/kfd and /dev/dri.
+SupplementaryGroups=render video
+WorkingDirectory=/opt/voiceover/studio
+Environment=HOST=127.0.0.1
+Environment=PORT=5199
+Environment=OLLAMA_URL=http://127.0.0.1:11434
+# Uploads are whole screen recordings; adapter-node refuses bodies over 512 KB
+# unless told otherwise.
+Environment=BODY_SIZE_LIMIT=Infinity
+ExecStart=/usr/bin/env node build
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

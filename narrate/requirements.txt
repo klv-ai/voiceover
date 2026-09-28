@@ -1,0 +1,8 @@
+# The analysis environment: narrate/.venv
+#
+# The narrate core is standard-library Python that shells out to ffmpeg and
+# Whisper; the lab scripts the studio runs here need numpy.
+numpy>=2.0
+# The fast transcriber on Apple Silicon. On Linux, transcription uses the
+# `whisper` command from the voice environment (see the README).
+mlx-whisper; sys_platform == "darwin"

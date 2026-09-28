@@ -1,0 +1,14 @@
+# Terms primed into the Whisper decoder as initial_prompt, for `narrate
+# analyze` run on its own. The studio does not read this file: its terms come
+# from Settings → Product and place names.
+#
+# Without priming, Whisper writes near-miss spellings for names it has never
+# seen, which then hide real mispronunciations behind confident wrong words.
+# One term or short phrase per line. Keep it under ~60 lines: Whisper
+# truncates initial_prompt at 224 tokens.
+#
+# Copy to lexicon.txt and replace these:
+Acme
+Acme Cloud
+retrieval-augmented generation
+PostgreSQL

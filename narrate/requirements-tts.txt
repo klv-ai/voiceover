@@ -1,0 +1,8 @@
+# The voice environment: narrate/.venv-tts
+#
+# Install torch FIRST, built for your GPU (see the README) — otherwise pip
+# pulls whichever build PyPI has. Tested with torch 2.6.0 on ROCm 6.2.4 and
+# Python 3.12.
+voxcpm==2.0.3
+openai-whisper==20250625
+numpy

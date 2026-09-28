@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Thin launcher so the tool runs without installing anything.
+exec python3 -m narrate "$@"
